@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+        <script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="/portal/resources/style-guide/css/fluig-style-guide.min.css"/>
+        <script type="text/javascript" src="/portal/resources/style-guide/js/fluig-style-guide.min.js"
+                charset="utf-8"></script>
+    </head>
+    <body>
+    <div class="fluig-style-guide">
+        <form name="kit_news" role="form">
+            <div class="form-group">
+                <label for="news_title">i18n.translate("kit_news.label.title")</label>
+                <input name="news_title" class="form-control" id="news_title">
+            </div>
+
+            <div class="form-group">
+                <label for="news_body">i18n.translate("kit_news.label.content")</label>
+                <textarea name="news_body" class="form-control" id="news_body" rows="10"></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="hidden" name="publishDate"  class="form-control" id="publishDate" >
+            </div> 
+			
+        </form>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="alert alert-info" role="alert">i18n.translate("kit_news.imagedimension")</div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(
+            function(){
+                $("#publishDate").val(new Date().getTime());
+            }
+        );
+    </script>
+
+
+    </body>
+</html>

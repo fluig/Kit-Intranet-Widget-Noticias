@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-web>
+    <context-root>/kit_news</context-root>
+    <disable-cross-context>false</disable-cross-context>
+
+    <security-domain>TOTVSTech</security-domain>
+
+    <security-role>
+        <role-name>user</role-name>
+        <principal-name>totvstech</principal-name>
+    </security-role>
+    <security-role>
+        <role-name>totvstech</role-name>
+        <principal-name>totvstech</principal-name>
+    </security-role>
+    <security-role>
+        <role-name>sysadmin</role-name>
+        <principal-name>wcmadmin</principal-name>
+    </security-role>
+    <security-role>
+        <role-name>admin</role-name>
+        <principal-name>wcmadmin</principal-name>
+    </security-role>
+
+    <valve>
+        <class-name>com.totvs.technology.auth.saml.TOTVSAuthenticatorValve</class-name>
+    </valve>
+</jboss-web>
